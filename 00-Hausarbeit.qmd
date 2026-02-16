@@ -1,0 +1,64 @@
+# Hausarbeit {.unnumbered}
+
+Link zur Hausarbeit: [https://classroom.github.com/a/SI_ObvrM](https://classroom.github.com/a/SI_ObvrM). Der Abgabetermin ist der **23. Juni 2024, 12:00**
+
+1. Klicken Sie auf den Einladungslink zur Aufgabe, melden Sie sich bei GitHub an und wählen Sie Ihre Studenten-ID aus der Liste aus. Bitte benutzen Sie eine E-Mail ([amarov\@feb.uni-sofia.bg](mailto:amarov@feb.uni-sofia.bg)), wenn Sie Ihre Studenten-ID dort nicht finden können. Bitte registrieren Sie sich bis zum **13. Juni 2024**.
+
+![Finden Sie Ihre Studenten-ID](images/hw/01-Open-Invitation.png)
+
+2. Die Hausaufgabe ist eine Gruppenaufgabe. Die Teamgröße ist auf drei Mitglieder begrenzt. Das erste Mitglied der Gruppe kann die Aufgabe öffnen und das Team erstellen. Die restlichen Mitglieder können sich dem Team anschliessen. Nachdem Sie die Aufgabe angenommen haben, wird Ihnen GitHub einen Link zu Ihrem Hausaufgaben-Repository zeigen. Die Repository enthält zunächst nur eine Platzhalterdatei (ohne Aufgabe) namens `index.ipynb`. Sie erhalten eine Benachrichtigung, wenn Ihre eigentliche Aufgabe verfügbar ist.
+
+![Ein Team erstellen](images/hw/02-Create-Team.png) ![Einem bestehenden Team beitreten](images/hw/02a-Join-Team.png)
+
+![Die Aufgabe annehmen](images/hw/03-Accept-Assignment.png)
+
+![Das Repository öffnen](images/hw/04-Open-Repo.png)
+
+5. Das war's, Ihr Repository ist jetzt konfiguriert und Sie erhalten eine Benachrichtigung, wenn Ihre Aufgabe verfügbar ist. Wenn Sie Fragen haben, senden Sie mir bitte eine E-Mail an [amarov\@feb.uni-sofia.bg](mailto:amarov@feb.uni-sofia.bg).
+
+Die Aufgabe wir in der Form eines Jupyter-Notebooks bereitgestellt und sie haben mehrere Möglichkeiten es zu bearbeiten. Wie sie das tun ist für die Bewertung nicht relevant.
+
+## Lokal bearbeiten
+
+Sie können die Hausaufgabe-Repository klonen und der Anleitung in @sec-setup folgen, um Ihre Pythonumgebung zu konfigurieren.
+
+
+## Mit Google Colab bearbeiten
+
+Sie können die Datei online in Google Colab bearbeiten. Dazu brauchen Sie nur einen Google-Account.
+
+1. Laden Sie die Datei `index.ipynb` von Ihrem Hausaufgaben-Repository herunter.
+
+2. Öffnen Sie [https://colab.research.google.com/](https://colab.research.google.com/) in Ihrem Browser und klicken Sie auf `Upload` -> `Browse` und wählen Sie die Datei `index.ipynb` aus, die Sie heruntergeladen haben.
+
+3. Bearbeiten Sie die Datei und laden Sie sie nach Abschluss der Bearbeitung wieder auf Ihren lokalen Computer herunter. Um die Datei herunterzuladen, klicken Sie auf `File` -> `Download` -> `.ipynb`.
+
+![Datei heruterladen](images/hw/06-Download-Assignment-File.png)
+![Datei heruterladen](images/hw/07-Save-Assignment-File.png)
+
+![Google Colab öffnen](images/hw/Colab-00-Open.png)
+![Upload file](images/hw/Colab-01-Upload.png)
+![Datei auswählen](images/hw/Colab-02-Find-Assignment-File.png)
+![Datei öffnen](images/hw/Colab-03-Open-Assignment-File.png)
+![Schreiben Sie Ihre Lösung](images/hw/Colab-04-Write-Solution.png)
+![Datei herunterladen](images/hw/Colab-05-Download-Solution.png)
+
+
+## Abgabe
+
+Die Abgabe erfolgt, indem Sie Ihre Lösung (als jupyter Notebook) in das Hausaufgaben-Repository hochladen. Sie können die Datei mehremals hochladen, es wird nur die letzte Version bewertet, die bis zum Abgabetermin hochgeladen wurde. Abgaben nach dem Abgabetermin werden nicht bewertet.
+
+1. Öffnen Sie Ihr Hausaufgaben-Repository und klicken Sie auf `Add file` -> `Upload files`.
+
+![Repository öffnen](images/hw/Submission-01-Open-Repo.png)
+
+2. Klicken Sie auf `Choose your files` und wählen Sie Ihre Lösung aus. Klicken Sie auf `Commit changes`, um die Datei hochzuladen.
+
+![Add files](images/hw/Submission-02-Add-Files.png)
+![Wählen Sie Ihre Lösung](images/hw/Submission-03-Find-Assignment-File.png)
+![Commit changes](images/hw/Submission-04-Commit-Changes-Button.png)
+
+3. Ihre Lösung wird jetzt hochgeladen. Sie können (und sollten) kontrollieren, ob die Datei korrekt hochgeladen wurde. Öffnen Sie Ihre Hausaufgabe-Repository, suchen Sie nach index.ipynb und klicken Sie darauf, um die Datei zu öffnen. Sie sollten Ihre Lösung sehen. Falls nicht, setzen Sie sich bitte mit mir in Verbindung, um das Problem zu lösen.
+
+![Datei öffnen](images/hw/Submission-05-Find-Assignment-File-Repo.png)
+![Lösung überprüfen](images/hw/Submission-06-Open-Assignment-File.png)

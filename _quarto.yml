@@ -1,0 +1,60 @@
+project:
+  type: book
+
+execute: 
+  enabled: true
+
+lang: de
+book:
+  title: "Einführung in die Ökonometrie"
+  author: "Boyko Amarov"
+  date: "4/02/2024"
+  chapters:
+    - index.qmd
+    - 00-Hausarbeit.qmd
+    - part: "Einführung in Python"
+      chapters:
+        - 01-Python/01-01-Basics.ipynb
+        - 01-Python/01-02-Basics-Ex.ipynb
+        - 01-Python/01-03-Numpy.ipynb
+        - 01-Python/01-04-Pandas.ipynb
+        - 01-Python/01-05-Pandas-Ex.ipynb
+    - 02-Deskriptive-Statistik.ipynb
+    - 03-KQ-Methode.ipynb
+    - 04a-Diskrete-Verteilungen.ipynb
+    - 04b-Stetige-Verteilungen.ipynb
+    - 05-Einweg-Varianzanalyse.ipynb
+    - 06-Multiples-Regressionsmodell.ipynb
+    - 07-NL.ipynb
+    - 08-Interaction-Effects.ipynb
+    
+    #     - 02-Review/02-Probability.ipynb
+    # - part: "Einfache Lineare Regression"
+    #   chapters:
+    #     - 03-Simple-Regression/01-Continuos-Predictor.ipynb
+        # - 03-Simple-Regression/02-One-Way-ANOVA.ipynb
+    # - 00-Homework-Instructions.qmd
+    # - 02-Statistics-Review.qmd
+    # - 01-Introduction-to-R.qmd
+    # - 02a-Continuous-Distributions.qmd
+    # - 03-Simple-Linear-Model.qmd
+    # - 04-Simple-ANOVA.qmd
+    # - 05-Hypothesis-Testing-and-CI.qmd
+    - Literature.qmd
+    - references.qmd
+  # appendices:
+  #   - Appendices/02-Random-Variables.ipynb
+  #   - Appendices/03-Die-Normalverteilung.ipynb
+  #   - Appendices/04-LA.ipynb
+
+
+bibliography: 
+  - references.bib
+  - examples.bib
+
+format:
+  html:
+    theme: cosmo
+    html-math-method: katex
+
+editor: visual

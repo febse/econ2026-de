@@ -1,0 +1,66 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+  // List of extensions which should be recommended for users of this workspace.
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": [
+    // Add extensions you don't want to recommend here
+  ],
+  "remote.autoForwardPortsFallback": 0,
+  "PandocCiter.DefaultBibs": ["references.bib"],
+  "cSpell.language": "en,de",
+  "cSpell.words": [
+    "Amarov",
+    "ANOVA",
+    "autopep",
+    "axhline",
+    "axvline",
+    "boyko",
+    "Boyko",
+    "codespaces",
+    "corrcoef",
+    "countplot",
+    "ddof",
+    "debugpy",
+    "Diagonalelemente",
+    "github",
+    "hosten",
+    "Interquartilsabstand",
+    "ipynb",
+    "jupyter",
+    "katex",
+    "kdeplot",
+    "Kovarianzmatrix",
+    "Kursrepositories",
+    "Kursrepository",
+    "linestyle",
+    "linalg",
+    "Miniconda",
+    "Numpy",
+    "plotly",
+    "quantile",
+    "Regressionsmodell",
+    "Residuenquadratsumme",
+    "scatterplot",
+    "steelblue",
+    "stripplot",
+    "textcoords",
+    "toolsai",
+    "vlines",
+    "widehat",
+    "xlabel",
+    "xlim",
+    "xytext",
+    "ylabel",
+    "ylim"
+  ]
+}
