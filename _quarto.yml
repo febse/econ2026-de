@@ -11,22 +11,22 @@ book:
   date: "4/02/2024"
   chapters:
     - index.qmd
-    - 00-Hausarbeit.qmd
-    - part: "Einführung in Python"
-      chapters:
-        - 01-Python/01-01-Basics.ipynb
-        - 01-Python/01-02-Basics-Ex.ipynb
-        - 01-Python/01-03-Numpy.ipynb
-        - 01-Python/01-04-Pandas.ipynb
-        - 01-Python/01-05-Pandas-Ex.ipynb
-    - 02-Deskriptive-Statistik.ipynb
-    - 03-KQ-Methode.ipynb
-    - 04a-Diskrete-Verteilungen.ipynb
-    - 04b-Stetige-Verteilungen.ipynb
-    - 05-Einweg-Varianzanalyse.ipynb
-    - 06-Multiples-Regressionsmodell.ipynb
-    - 07-NL.ipynb
-    - 08-Interaction-Effects.ipynb
+    # - 00-Hausarbeit.qmd
+    # - part: "Einführung in Python"
+    #   chapters:
+    #     - 01-Python/01-01-Basics.ipynb
+    #     - 01-Python/01-02-Basics-Ex.ipynb
+    #     - 01-Python/01-03-Numpy.ipynb
+    #     - 01-Python/01-04-Pandas.ipynb
+    #     - 01-Python/01-05-Pandas-Ex.ipynb
+    - 01-Deskriptive-Statistik.ipynb
+    # - 03-KQ-Methode.ipynb
+    # - 04a-Diskrete-Verteilungen.ipynb
+    # - 04b-Stetige-Verteilungen.ipynb
+    # - 05-Einweg-Varianzanalyse.ipynb
+    # - 06-Multiples-Regressionsmodell.ipynb
+    # - 07-NL.ipynb
+    # - 08-Interaction-Effects.ipynb
     
     #     - 02-Review/02-Probability.ipynb
     # - part: "Einfache Lineare Regression"
