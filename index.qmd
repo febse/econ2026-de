@@ -12,7 +12,8 @@ In den Übungen werden wir die Programmiersprache Python verwenden, um die in de
 
 ## Notebooks
 
-- [01-Deskriptive Statistik]({{< var colabPrefix >}}01-Deskriptive-Statistik-Class.ipynb)
+-   [01-Deskriptive Statistik]({{< var colabPrefix >}}01-Deskriptive-Statistik-Class.ipynb)
+-   [02-Statistik-Wiederholung]({{< var colabPrefix >}}02-Statistik-Wiederholung-Class.ipynb)
 
 ## Google Colab
 
