@@ -14,6 +14,7 @@ In den Übungen werden wir die Programmiersprache Python verwenden, um die in de
 
 -   [01-Deskriptive Statistik]({{< var colabPrefix >}}01-Deskriptive-Statistik-Class.ipynb)
 -   [02-Statistik-Wiederholung]({{< var colabPrefix >}}02-Statistik-Wiederholung-Class.ipynb)
+  
 -   [The uniform distribution](https://www.desmos.com/calculator/cwqbsrgjpr)
 
 -   [The Central Limit Theorem](https://colab.research.google.com/github/febse/econ2026-de/blob/main/04b-Stetige-Verteilungen.ipynb)
