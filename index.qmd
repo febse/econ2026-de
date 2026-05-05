@@ -25,7 +25,7 @@ In den Übungen werden wir die Programmiersprache Python verwenden, um die in de
 
 - [OLS - Eine Variable](https://colab.research.google.com/github/febse/econ2026-de/blob/main/03-1-Least-Squares-Class.ipynb)
 - [Multiple Regression](https://colab.research.google.com/github/febse/econ2026-de/blob/main/06-Multiple-Regression-Paradoxes.ipynb)
-
+- [Eiweg-ANOVA Simulation](https://colab.research.google.com/github/febse/econ2026-de/blob/main/06-Simulation-Class.ipynb)
 
 ## Google Colab
 
