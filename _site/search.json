@@ -1,0 +1,122 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Einführung in die Ökonometrie",
+    "section": "",
+    "text": "1 Setup\nIn den Übungen werden wir die Programmiersprache Python verwenden, um die in der Vorlesung behandelten Themen zu erklären und an realen Daten zu üben. Die Übungen werden in Form von Jupyter Notebooks bereitgestellt, die Sie in Ihrer eigenen Umgebung ausführen können.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#notebooks",
+    "href": "index.html#notebooks",
+    "title": "Einführung in die Ökonometrie",
+    "section": "1.1 Notebooks",
+    "text": "1.1 Notebooks\n\n01-Deskriptive Statistik\n02-Statistik-Wiederholung\nThe uniform distribution\nThe Central Limit Theorem\nThe Normal distribution\nOLS Geometry\nOLS - Eine Variable\nMultiple Regression\nEiweg-ANOVA Simulation",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#google-colab",
+    "href": "index.html#google-colab",
+    "title": "Einführung in die Ökonometrie",
+    "section": "1.2 Google Colab",
+    "text": "1.2 Google Colab\nDie einfachste Möglichkeit, die Übungen auszuführen, ist die Verwendung von Google Colab. Google Colab ist eine kostenlose Online-Plattform, die es Ihnen ermöglicht, Jupyter Notebooks in Ihrem Browser auszuführen, ohne dass Sie Python oder andere Software auf Ihrem Computer installieren müssen. Sie benötigen lediglich ein Google-Konto.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Setup</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html",
+    "href": "01-Deskriptive-Statistik.html",
+    "title": "2  Deskriptive Statistik",
+    "section": "",
+    "text": "2.1 Notation\nIn dieser Übung werden wir die Grundlagen der deskriptiven Statistik mit Pandas kennenlernen. Wir werden uns mit den folgenden Themen beschäftigen:\nIm folgenden werden wir die Daten einer Studie über die Besucher eines Einkaufszentrums analysieren. Die Daten enthalten 1816 Interviews von Personen in einem Einkaufszentrum. Wir werden die folgenden Variablen betrachten:\nThe dataset customers contains 1816 observations (customers) and 15 variables (columns). We will focus on the variables height and weight for now. We want to understand the characteristics of the customers in terms of their height and weight. It is extremely difficult to process and understand the raw data directly, because we must think about 2 \\times 1816 = 3632 numbers. Therefore, we need to reduce the data to a few numbers that we can reason about. This is the goal of descriptive statistics.\nIn diesem Kurs werden wir uns auf zwei Fragen konzentrieren: - Wo liegen die Daten (Lage, location)? - Wie start streuen die Daten? In diesem Beispiel können wir uns z.B. fragen wie unterschiedlich die Besucher in Bezug auf ihre Größe sind.\nDie wichtigste Zusammenfassungsstatistik (eine Funktion der Daten) ist der Stichprobenmittelwert, auch bekannt als arithmetisches Mittel. Um den Mittelwert und weitere Statistiken zu definieren, führen wir hier einige Notationen ein.\nEine Variable ist eine Eigenschaft, die wir an einer Person, einem Objekt oder einem Ereignis messen können. In diesem Beispiel ist die Variable height die Größe einer Person. Im allgemeinen werden wir solche Variablen mit mit lateinischen Buchstaben bezeichnen, z.B. x, y, z. Was diese Bezeichnungen bedeuten, hängt vom Kontext ab. In diesem Beispiel sei x die Größe der Personen aus der Erhebung. Wir werden die Beobachtungen (hier Personen) üblicherweise mit einem Index bezeichnen: i = 1,2, \\ldots, n, wobei n die Anzahl der Beobachtungen ist. Die Werte der Variable x für die Beobachtungen i = 1,2, \\ldots, n bezeichnen wir mit x_1, x_2, \\ldots, x_n.\nZum Beispiel ist die Größe des zweiten Besuchers x_2 = 66 Inch.\n# Extract the height of the second customer\n# Remember that the index is 0-based, so the second customer has index 1\ncustomers[\"height\"][1]\n\nnp.int64(66)\n# Extract the heights of the first three customers\n# Remember that indexing is exclusive, so the last index is not included\ncustomers[\"height\"][:3]\n\n0    74\n1    66\n2    64\nName: height, dtype: int64\n# Calculate the average height of the first three customers\ncustomers[\"height\"][:3].mean()\n\nnp.float64(68.0)\nNun möchten wir den Mittelwert der Größe für alle Besucher berechnen.\nprint(customers[\"height\"].mean())\nprint(np.mean(customers[\"height\"]))\n\n66.56883259911895\n66.56883259911895",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html#notation",
+    "href": "01-Deskriptive-Statistik.html#notation",
+    "title": "2  Deskriptive Statistik",
+    "section": "",
+    "text": "Definition 2.1 (Stichprobenmittelwert (Sample Mean)) \n\\bar{x} = \\frac{1}{n} \\sum_{i=1}^{n} x_i\n\nDas ist einfach die Summe aller Werte geteilt durch die Anzahl der Werte.\n\n\\bar{x} = \\frac{x_1 + x_2 + \\ldots + x_n}{n}\n\n\n\nBeispiel 2.1 (Stichprobenmittelwert) Lasst uns den Mittelwert der ersten drei Besucher ausrechnen: x_1 = 74, x_2 = 66, x_3 = 64.\n\n\\frac{74 + 66 + 64}{3} = 68",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html#streuung",
+    "href": "01-Deskriptive-Statistik.html#streuung",
+    "title": "2  Deskriptive Statistik",
+    "section": "2.2 Streuung",
+    "text": "2.2 Streuung\nDer Mittelwert informiert uns über das Zentrum (Lage) der Daten. Die zweite Charakteristik einer Variable, die wir verstehen wollen, ist wie weit die Daten verteilt sind (wie unterschiedlich, heterogen, die Kunden in Bezug auf die Größe sind, zum Beispiel). Der Begriff der Streuung ist abstrakt und kann auf verschiedene Weisen gemessen werden. Wir können uns die Streuung zum Beispiel als die durchschnittliche Differenz der Kunden zum Mittelwert vorstellen. Dies ist das Konzept der Varianz.\n\nDefinition 2.2 (Stichprobenvarianz und Stichprobenstandardabweichung) Für eine Variable x mit n Beobachtungen: x_1, x_2, \\ldots, x_n, ist die Stichprobenvarianz definiert als:\n\nS_x^2 = \\frac{1}{n-1} \\sum_{i=1}^{n} (x_i - \\bar{x})^2\n\nDabei ist \\bar{x} der Stichprobenmittelwert.\nDie Stichprobenstandardabweichung ist die Quadratwurzel der Stichprobenvarianz:\n\nS_x = \\sqrt{S^2}\n\n\n\nBeispiel 2.2 (Stichprobenvarianz und Stichprobenstandardabweichung) Lasst uns die Stichprobenstandardabweichung für die ersten drei Besucher berechnen x_1 = 74, x_2 = 66, x_3 = 64.\nZuerst müssen wir den Stichprobenmittelwert ausrechnen: \\bar{x} = 68 (Beispiel 2.1)\nDanach berechnen wir die Differenzen der Werte zum Mittelwert und quadrieren diese:\n\nS^2 = \\frac{(74 - 68)^2 + (66 - 68)^2 + (64 - 68)^2}{3-1} = \\frac{36 + 4 + 16}{2} = 28\n\nDie Stichprobenstandardabweichung ist die Quadratwurzel der Stichprobenvarianz:\n\nS = \\sqrt{28} \\approx 5.29\n\n\n\n# Hier replizieren wir die Berechnung der Varianz der Größe der ersten drei Kunden\ncustomers[\"height\"][0:3].var()\n\nnp.float64(28.0)\n\n\n\n# Sie können die Varianz auch mit der numpy Funktion np.var berechnen\n\nnp.var(customers[\"height\"][0:3])\n\nnp.float64(18.666666666666668)\n\n\n\nnp.var(customers[\"height\"][0:3], ddof=1)\n\nnp.float64(28.0)\n\n\n\n# Die Standardabweichung der Größe der ersten drei Besucher berechnen\n\ncustomers[\"height\"][0:3].std()\n\nnp.float64(5.291502622129181)\n\n\n\nnp.std(customers[\"height\"][0:3], ddof=1)\n\nnp.float64(5.291502622129181)\n\n\nnp.var und np.std berechnen die Stichprobenvarianz und -standardabweichung nach der Formel\n\nS^2 = \\frac{1}{1 - \\text{ddof}} \\sum_{i=1}^{n} (x_i - \\bar{x})^2\n\nwobei ddof die Anzahl der Freiheitsgrade im Nenner (denominator degrees of freedom) steht. Die Voreinstellung ist ddof=0.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html#weitere-maße-der-lage-und-streuung",
+    "href": "01-Deskriptive-Statistik.html#weitere-maße-der-lage-und-streuung",
+    "title": "2  Deskriptive Statistik",
+    "section": "2.3 Weitere Maße der Lage und Streuung",
+    "text": "2.3 Weitere Maße der Lage und Streuung\nDie Reduzierung auf einen einzigen Wert als Stichprobenmittelwert ist sehr nützlich, weil wir leicht darüber nachdenken können (nur ein Wert). Allerdings ignoriert diese Reduktion viele Details über die Kunden. Zum Beispiel wissen wir nicht, wie viele Kunden nahe am Mittelwert sind, wie viele weit entfernt sind, und so weiter. Die Standardabweichung hilft uns, dies zu verstehen, ist aber immer noch eine einzige Zahl.\nUm unser Verständnis der Daten weiter zu vertiefen, können wir andere Maße der Lage und Streuung verwenden.\n\nDer Median ist der Wert, der die Daten in zwei gleiche Hälften teilt. Es ist der Wert, der die gleiche Anzahl von Beobachtungen über und unter sich hat. Sie können sagen, dass etwa die Hälfte der Beobachtungen einen Wert kleiner als den Median hat und etwa die andere Hälfte einen Wert größer als den Median hat. Ein anderer Name für den Median ist das zweite Quartil (Q2). Dies kommt daher, dass die Stichprobe in vier Teile geteilt wird. Ein weiterer Name für den Median ist das 50. Perzentil (Teilung der Stichprobe in 100 Teile) oder das 0,5-Quantil.\nDas erste Quartil (Q1) ist der Wert, der die ersten 25% der Daten von den restlichen trennt. Sie können sagen, dass ungefähr 25% der Beobachtungen einen Wert kleiner als Q1 und 75% einen Wert größer als Q1 haben. Ein anderer Name für das erste Quartil ist das 25. Perzentil oder das 0,25-Quantil.\nDas zweite Quartil (Q2) ist der Median.\nDas dritte Quartil (Q3) ist der Wert, der die ersten 75% der Daten von den restlichen trennt. Sie können sagen, dass ungefähr 75% der Beobachtungen einen Wert kleiner als Q3 und 25% einen Wert größer als Q3 haben. Ein anderer Name für das dritte Quartil ist das 75. Perzentil oder das 0,75-Quantil.\nDas Maximum ist der größte Wert in den Daten. Es wird manchmal das 100. Perzentil genannt.\nDas Minimum ist der kleinste Wert in den Daten. Es wird manchmal das 0. Perzentil genannt.\n\nDie Differenz zwischen dem Minimum und dem Maximum ist der Bereich (range) der Daten. Es ist ein Maß für die Streuung der Daten, aber es ist sehr anfällig für extreme Werte. Ein Ausreißer ist ein Wert, der sehr weit von den anderen Werten entfernt ist. Der Median und die Quartile sind weniger anfällig für Ausreißer und werden als robuste Maße der Lage und Streuung bezeichnet.\nDie Differenz zwischen dem dritten und dem ersten Quartil ist der Interquartilsabstand (IQR). Es ist ein Maß für die Streuung der mittleren 50% der Daten. Es ist auch ein robustes Maß der Streuung, da es weniger anfällig für Ausreißer ist.\n\n# Mittelwert, Standardabweichung, Minimum und Maximum und die Quartile der Größe der Kunden berechnen\n\ncustomers[\"height\"].describe()\n\ncount    1816.000000\nmean       66.568833\nstd         3.831822\nmin        57.000000\n25%        64.000000\n50%        66.000000\n75%        69.250000\nmax        82.000000\nName: height, dtype: float64\n\n\n\n# Falls wir nur eine der statistischen Kennzahlen berechnen wollen, können wir auch die entsprechende Funktion verwenden\n\nprint(customers[\"height\"].min())\nprint(customers[\"height\"].quantile(0.25))\nprint(customers[\"height\"].quantile(0.5))\nprint(customers[\"height\"].quantile(0.75))\nprint(customers[\"height\"].max())\n\n57\n64.0\n66.0\n69.25\n82\n\n\n\n# Den Interquartilsabstand berechnen\n\ncustomers[\"height\"].quantile(0.75) - customers[\"height\"].quantile(0.25)\n\nnp.float64(5.25)\n\n\nBerechnen Sie den Mittelwert, Median, Standardabweichung, Minimum, Maximum, Quartile und Interquartilsabstand für das Gewicht der Kunden.\n\n# Schreiben Sie Ihren Code hier\n\nHäufig werden diese Quantile und der Interquartilsabstand in einem Boxplot dargestellt. Ein Boxplot ist ein Diagramm, das die Verteilung der Daten in einem Box-Whisker-Diagramm darstellt. Die Box repräsentiert das Interquartilsintervall (IQR). Die Whisker repräsentieren die Daten außerhalb des IQR. Punkte, die außerhalb der Whisker liegen sind Punkte, die weit von den anderen Daten entfernt sind und werden Ausreißer genannt (was ein Ausreißer ist, ist allerdings kompliziert).\n\nsns.boxplot(customers[\"height\"], orient=\"h\")\n\n\n\n\n\n\n\n\nDie Boxplots sind nützlich, wenn wir die Verteilung einer Variablen in verschiedenen Gruppen vergleichen wollen. Als Beispiel können wir die Verteilung der Größe in verschiedenen ethnischen Gruppen vergleichen.\n\nsns.boxplot(x = customers[\"height\"], y = customers[\"ethnicity\"])",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html#zusammenfassung-kategorialer-variablen",
+    "href": "01-Deskriptive-Statistik.html#zusammenfassung-kategorialer-variablen",
+    "title": "2  Deskriptive Statistik",
+    "section": "2.4 Zusammenfassung kategorialer Variablen",
+    "text": "2.4 Zusammenfassung kategorialer Variablen\nDer Mittelwert und die Standardabweichung machen nur für Variablen Sinn, für die Addition und Multiplikation sinnvoll sind. Insbesondere machen sie keinen Sinn für kategoriale Variablen, z. B. die Ethnie der Kunden.\nDie wichtigste Zusammenfassung für kategoriale Variablen ist die Häufigkeitstabelle. Eine Häufigkeitstabelle zeigt die Anzahl der Beobachtungen für jede Kategorie. Die relative Häufigkeitstabelle zeigt den Anteil der Beobachtungen für jede Kategorie.\n\ncustomers[\"ethnicity\"].value_counts()\n\nethnicity\nWhite       1494\nBlack        180\nHispanic     104\nOther         38\nName: count, dtype: int64\n\n\n\nsns.countplot(data = customers, x=\"ethnicity\")",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html#datentransformationen",
+    "href": "01-Deskriptive-Statistik.html#datentransformationen",
+    "title": "2  Deskriptive Statistik",
+    "section": "2.5 Datentransformationen",
+    "text": "2.5 Datentransformationen\nEs ist in fast jeder Analyse notwendig, die Daten zu transformieren. Als Beispiel können wir die Größe in Inch in Zentimeter umrechnen. Die Umrechnung von Inch in Zentimeter erfolgt durch Multiplikation mit 2,54. Die Umrechnung von Pfund in Kilogramm erfolgt durch Multiplikation mit 0,45.\n\n# Hier erstellen wir eine neue Spalte, die die Größe in cm enthält\ncustomers[\"height_cm\"] = customers[\"height\"] * 2.54\n\n\n# Erstellen Sie eine neue Spalte \"weight_kg\" in dem Dataframe \"customers\", die die Werte der Spalte \"weight\" in Kilogramm umrechnet.\n# 1 Pfund entspricht 0.453592 Kilogramm.\n\nHäufig möchten wir eine stetige Variable in Kategorien einteilen. Zum Beispiel möchten wir eine Variable erstellen, die angibt, ob eine Person jünger als 30 Jahre ist oder nicht. Dies ist eine binäre Variable, die wir aus einer kontinuierlichen Variable erstellen.\n\ncustomers[\"is_under_30\"] = customers[\"age\"] &lt; 30\ncustomers[[\"age\", \"is_under_30\"]].head()\n\n\n\n\n\n\n\n\nage\nis_under_30\n\n\n\n\n0\n45\nFalse\n\n\n1\n58\nFalse\n\n\n2\n29\nTrue\n\n\n3\n57\nFalse\n\n\n4\n91\nFalse\n\n\n\n\n\n\n\nFalls wir mehr als zwei Kategorien brauchen, bietet die Funktion pd.cut die Möglichkeit, die Daten in Kategorien einzuteilen.\n\n# Wir lassen uns die Häufigkeitsverteilung der Altersgruppen ausgeben,\n# um zu sehen, wie pd.cut funktioniert\n\npd.cut(\n    customers[\"age\"],\n    bins=[0, 30, 64, np.inf],\n).value_counts()\n\nage\n(30.0, 64.0]    1041\n(0.0, 30.0]      512\n(64.0, inf]      263\nName: count, dtype: int64\n\n\n\n# Hier weisen wir Etiketten der Kategorien und speichern das Ergebnis in einer neuen Spalte \"age_group\"\n\ncustomers[\"age_group\"] = pd.cut(\n    customers[\"age\"],\n    bins=[0, 30, 64, np.inf],\n    labels=[\"&lt;30\", \"30-64\", \"65+\"]\n)\n\n# Als Kontrolle lassen wir uns die ersten 5 Zeilen des Dataframes anzeigen\ncustomers[[\"age\", \"age_group\"]].head()\n\n\n\n\n\n\n\n\nage\nage_group\n\n\n\n\n0\n45\n30-64\n\n\n1\n58\n30-64\n\n\n2\n29\n&lt;30\n\n\n3\n57\n30-64\n\n\n4\n91\n65+",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "01-Deskriptive-Statistik.html#aufgabe",
+    "href": "01-Deskriptive-Statistik.html#aufgabe",
+    "title": "2  Deskriptive Statistik",
+    "section": "2.6 Aufgabe",
+    "text": "2.6 Aufgabe\nBerechnen Sie den BMI (Body Mass Index) für die Kunden. Der BMI ist definiert als das Körpergewicht in Kilogramm geteilt durch das Quadrat der Größe in Metern. Das Gewicht muss in Kilogramm und die Größe in Metern sein.\n\n# Erstellen Sie die Spalte \"bmi\" in dem Dataframe \"customers\", die den Body Mass Index berechnet.\n\ncustomers[\"bmi\"] = customers[\"weight\"] / (customers[\"height\"] / 100) ** 2\n\nDie Referenzwerte für den BMI sind:\n\nUnter 18,5: Untergewicht\n18,5 - 24,9: Normalgewicht\n25 - 29,9: Übergewicht\n30 oder mehr: Adipositas\nEin Verkäufer behauptet, daß die Kunden im Einkaufszentrum im Durchschnitt übergewichtig sind. Überprüfen Sie diese Behauptung anhand der Daten.\nEin anderer Verkäufer behauptet, daß mehr als ein Viertel der Besucher im Einkaufszentrum adipös sind. Überprüfen Sie diese Behauptung anhand der Daten.\n\n\n# Berechnen Sie den durchschnittlichen BMI\n\ncustomers[\"bmi\"].mean()\n\nnp.float64(351.1234041165582)\n\n\n\n# Lassen Sie sich die Beschreibung der Spalte \"bmi\" anzeigen. (Tipp: Verwenden Sie die Methode .describe() der Spalte \"bmi\").\n\ncustomers[\"bmi\"].describe()\n\ncount    1789.000000\nmean      351.123404\nstd        65.866606\nmin       163.265306\n25%       307.478675\n50%       340.136054\n75%       378.703497\nmax       761.862330\nName: bmi, dtype: float64\n\n\nErstellen Sie eine neue Spalte is_underweight in der Tabelle customers, die angibt, ob ein Kunde untergewichtig ist oder nicht. Erstellen Sie eine weitere Spalte is_normal in der Tabelle customers, die angibt, ob ein Kunde ein Normalgewicht hat oder nicht.\nHinweis: Sie können diese Variable mit den logischen Operatoren &lt;, &lt;=, &gt;, &gt;= und == erstellen. Logische Operationen können Sie mit den Operatoren & (und), | (oder) und ~ (nicht) verknüpfen (Hinweis: hier brauchen Sie und).\n\n# Erstellen Sie die zwei Variablen hier\n\ncustomers[\"is_overweight\"] = customers[\"bmi\"] &gt; 25\n\nWie viele Kunden sind untergewichtig? Wie viele Kunden haben ein Normalgewicht? Hinweis: Benutzen Sie die Methode value_counts um die Anzahl der Kunden in jeder Kategorie zu berechnen. Sie können auch die Methode sum benutzen, um die Anzahl der Kunden in einer Kategorie zu berechnen.\n\n# Wie viele Kunden sind untergewichtig?\n# a) mit .value_counts()\n\n# b) mit .sum()\n\nErstellen Sie eine neue Spalte bmi_category in der Tabelle customers, die die Kategorie des BMI angibt (Untergewicht, Normalgewicht, Übergewicht, Adipositas). Hinweis: Sie können diese Variable mit der Funktion pd.cut erstellen.\n\n# Erstellen Sie `bmi_category` hier\n\nVisualisieren Sie die Verteilung der Kategorien des BMI. Hinweis: Benutzen Sie die Funktion sns.countplot aus der Bibliothek seaborn.\n\n# Erstellen Sie die Graphik hier\n\nNun möchten Wir die Verteilung des BMI für Männer und Frauen vergleichen. Berechnen Sie den Mittelwert des BMI für Männer und Frauen. Hinweis: Sie können die Methode groupby benutzen, um die Mittelwerte für verschiedene Gruppen zu berechnen.\n\n# Als Beispiel für die Benutzung von .groupby() werden hier die Mittelwerte des Alters für jede Ethnie berechnet\n\ncustomers.groupby(\"ethnicity\")[\"age\"].mean()\n\nethnicity\nBlack       41.733333\nHispanic    36.288462\nOther       41.763158\nWhite       43.571620\nName: age, dtype: float64\n\n\n\n# Berechnen Sie die Mittelwerte des BMI für Männer und Frauen.\n\n\n# Vergleichen Sie die Verteilungen des BMI für Männer und Frauen mit einem Boxplot.\n\n# Bevor wir die Boxplots erstellen, müssen wir die Variable \"male\" in eine kategorische Variable umwandeln. Die neue Variable nennen wir \"sex\"\ncustomers[\"sex\"] = pd.Categorical(customers[\"male\"], ordered=False)\n\n# Erstellen Sie die Boxplots hier",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Deskriptive Statistik</span>"
+    ]
+  },
+  {
+    "objectID": "Literature.html",
+    "href": "Literature.html",
+    "title": "Empfohlene Literatur",
+    "section": "",
+    "text": "James u. a. (2023)\n\nDas Lehrbuch ist eine Einführung in die statistische Lerntheorie und behandelt das lineare Regressionsmodell, das der Kern des Kurses ist. Enthalten sind Beispielanwendungen in Python.\n\nMcKinney (2022)\n\nDas Buch ist eine Einführung in die Datenanalyse mit Python und behandelt die Grundlagen der Programmiersprache und der Datenanalyse. Es ist ein guter Einstieg in die Programmierung mit Python.\n\nGelman, Hill, und Vehtari (2021):\n\nRegression and other stories. Cambridge New York, NY Port Melbourne, VIC New Delhi Singapore: Cambridge University Press (Analytical methods for social research). Available at: https://doi.org/10.1017/9781139161879.\n\n\n\n\nGelman, Andrew, Jennifer Hill, und Aki Vehtari. 2021. Regression and Other Stories. Analytical Methods for Social Research. Cambridge New York, NY Port Melbourne, VIC New Delhi Singapore: Cambridge University Press. https://doi.org/10.1017/9781139161879.\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, Robert Tibshirani, und Jonathan Taylor. 2023. An Introduction to Statistical Learning with Applications in Python. Cham: Springer International Publishing.\n\n\nMcKinney, Wes. 2022. Python for Data Analysis: Data Wrangling with Pandas, NumPy, and Jupyter. Third edition. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly.",
+    "crumbs": [
+      "Empfohlene Literatur"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Literaturverzeichnis",
+    "section": "",
+    "text": "Gelman, Andrew, Jennifer Hill, and Aki Vehtari. 2021. Regression and\nOther Stories. Analytical Methods for Social Research.\nCambridge New York, NY Port Melbourne, VIC New Delhi\nSingapore: Cambridge University Press. https://doi.org/10.1017/9781139161879.\n\n\nJames, Gareth, Daniela Witten, Trevor Hastie, Robert Tibshirani, and\nJonathan Taylor. 2023. An Introduction to\nStatistical Learning with Applications in\nPython. Cham: Springer\nInternational Publishing.\n\n\nMcKinney, Wes. 2022. Python for Data Analysis: Data Wrangling with\nPandas, NumPy, and Jupyter.\nThird edition. Beijing Boston Farnham Sebastopol Tokyo:\nO’Reilly.",
+    "crumbs": [
+      "Literaturverzeichnis"
+    ]
+  }
+]
