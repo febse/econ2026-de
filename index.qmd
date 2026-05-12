@@ -27,6 +27,8 @@ In den Übungen werden wir die Programmiersprache Python verwenden, um die in de
 - [Multiple Regression](https://colab.research.google.com/github/febse/econ2026-de/blob/main/06-Multiple-Regression-Paradoxes.ipynb)
 - [Eiweg-ANOVA Simulation](https://colab.research.google.com/github/febse/econ2026-de/blob/main/06-Simulation-Class.ipynb)
 
+- [t-Test](https://colab.research.google.com/github/febse/econ2026/blob/main/06-Simulation-Tests.ipynb)
+
 ## Google Colab
 
 Die einfachste Möglichkeit, die Übungen auszuführen, ist die Verwendung von [Google Colab](https://colab.research.google.com/). Google Colab ist eine kostenlose Online-Plattform, die es Ihnen ermöglicht, Jupyter Notebooks in Ihrem Browser auszuführen, ohne dass Sie Python oder andere Software auf Ihrem Computer installieren müssen. Sie benötigen lediglich ein Google-Konto.
