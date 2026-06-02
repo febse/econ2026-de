@@ -29,6 +29,7 @@ In den Übungen werden wir die Programmiersprache Python verwenden, um die in de
 
 - [t-Test](https://colab.research.google.com/github/febse/econ2026/blob/main/06-Simulation-Tests.ipynb)
 - [Kategoriale Variablen](https://colab.research.google.com/github/febse/econ2026-de/blob/main/09-Categorical-Variables.ipynb)
+- [Interaktionseffekte](https://colab.research.google.com/github/febse/econ2026-de/blob/main/10-Interaction.ipynb)
 
 ## Google Colab
 
